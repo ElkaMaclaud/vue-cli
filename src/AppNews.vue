@@ -8,6 +8,8 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit id omnis alias qui
                 commodi, voluptate rem doloribus iste, dolor dolorum assumenda eligendi a.</p>
             <app-button v-if="!wasRead" color="primary" @action="mark">Прочесть новость</app-button>
+
+            <app-news-list></app-news-list>
         </div>
     </div>
 </template>
@@ -36,23 +38,23 @@ export default {
                 // console.log(value)
                 return true
             }
-        },
+        }
     },
     // emits: ["open-news"],
     emits: {
-        "open-news": null,
-        "read-news"(id) {
+        'open-news': null,
+        'read-news'(id) {
             if (id) {
                 return true
             }
-            console.warn("Нет параметра для id для emit read-news")
+            console.warn('Нет параметра для id для emit read-news')
             return false
         },
         unmark: null
     },
     data() {
         return {
-            isNewsOpen: this.isOpen,
+            isNewsOpen: this.isOpen
         }
     },
     methods: {
@@ -64,12 +66,12 @@ export default {
         },
         mark() {
             this.isNewsOpen = false
-            this.$emit("read-news", this.id)
-        },
+            this.$emit('read-news', this.id)
+        }
         // unmark() {
         //     this.$emit("unmark", this.id)
         // }
     },
-    components: { AppButton }
+    components: { AppButton, AppNewsList }
 }
 </script>
