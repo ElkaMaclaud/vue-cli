@@ -14,7 +14,8 @@
 
 <script>
 import AppButton from './AppButton.vue'
-import AppNewsList from './AppNewsList.vue';
+import AppNewsList from './AppNewsList.vue'
+
 export default {
     // props: ["title"],
     props: {
