@@ -17,6 +17,7 @@ module.exports = {
     'no-unused-vars': 'off',
     "no-irregular-whitespace": "off",
     "no-mixed-spaces-and-tabs": "off",
-    "indent": "off"
+    "indent": "off",
+   "Strings must use singlequote": "off"
   }
 }
